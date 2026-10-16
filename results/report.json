@@ -1,0 +1,50 @@
+{
+  "scorer": "rule-based",
+  "n_items": 34,
+  "threshold_0.5": {
+    "threshold": 0.5,
+    "n": 34,
+    "policies": {
+      "spam": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 8,
+        "fp": 0,
+        "fn": 0
+      },
+      "harassment": {
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "tp": 2,
+        "fp": 0,
+        "fn": 4
+      },
+      "ai_slop": {
+        "precision": 1.0,
+        "recall": 0.8333333333333334,
+        "f1": 0.9090909090909091,
+        "tp": 5,
+        "fp": 0,
+        "fn": 1
+      }
+    },
+    "latency_ms": {
+      "50": 0.06735949999381319,
+      "90": 0.1006612000082896,
+      "99": 1.1019043099912575
+    },
+    "any_violation": {
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571428571428571,
+      "tp": 15,
+      "fp": 0,
+      "fn": 5
+    }
+  },
+  "best_threshold": 0.4,
+  "best_threshold_f1": 0.9743589743589743,
+  "est_cost_per_1k_items_usd": 0.0
+}
