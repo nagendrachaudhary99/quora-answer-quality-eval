@@ -10,7 +10,8 @@ from __future__ import annotations
 import math
 import re
 import time
-from dataclasses import dataclass, field
+
+from .base import Score, Scorer  # noqa: F401  (Score re-exported here)
 
 POLICIES = ("spam", "harassment", "ai_slop")
 
@@ -40,14 +41,6 @@ _AI_TELLS = [
 
 def _count_hits(patterns, text):
     return sum(1 for p in patterns if re.search(p, text, re.IGNORECASE))
-
-
-@dataclass
-class Score:
-    probs: dict = field(default_factory=dict)  # policy -> probability
-    latency_ms: float = 0.0
-    provider: str = "rule-based"
-    cost_usd: float = 0.0
 
 
 class RuleBasedScorer:

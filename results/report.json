@@ -1,5 +1,11 @@
 {
   "scorer": "rule-based",
+  "dataset": {
+    "path": "labeled_answers.jsonl",
+    "sha1": "2c491ebe4fd286496373e160c2bb5e9d656f6eb0",
+    "n_rows": 34,
+    "n_skipped_malformed": 0
+  },
   "n_items": 34,
   "threshold_0.5": {
     "threshold": 0.5,
@@ -31,9 +37,9 @@
       }
     },
     "latency_ms": {
-      "50": 0.06735949999381319,
-      "90": 0.1006612000082896,
-      "99": 1.1019043099912575
+      "50": 0.1251359999514534,
+      "90": 0.15289650004888244,
+      "99": 1.9226193999338692
     },
     "any_violation": {
       "precision": 1.0,
